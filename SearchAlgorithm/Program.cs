@@ -113,6 +113,32 @@ namespace SearchAlgorithm
                 Console.WriteLine("3. Exit");
                 Console.WriteLine("Enter your choice (1,2,3) : ");
                 pilihanmenu = Convert.ToInt32(Console.ReadLine());
+                switch(pilihanmenu)
+                {
+                    case 1:
+                        Console.WriteLine("");
+                        Console.WriteLine(".......................");
+                        Console.WriteLine("Linear Search");
+                        Console.WriteLine(".......................");
+                        MyList.input();
+                        MyList.LinearSearch();
+                        break;
+                    case 2:
+                        Console.WriteLine("");
+                        Console.WriteLine(".......................");
+                        Console.WriteLine("Linear Search");
+                        Console.WriteLine(".......................");
+                        MyList.input();
+                        MyList.LinearSearch();
+                        break;
+                    case 3:
+                        Console.WriteLine("exit");
+                        break;
+                    default:
+                        Console.WriteLine("Error");
+                        break;
+
+                }
             }
         }
     }
