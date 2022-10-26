@@ -21,14 +21,14 @@ namespace SearchAlgorithm
                 if ((n > 0) && (n <= 20))
                     break;
                 else
-                    Console.WriteLine("n\Array should have minimum 1 and maximum 20 element. \n");
+                    Console.WriteLine("\nArray should have minimum 1 and maximum 20 element. \n");
             }
             //Accept array elements
             Console.WriteLine("");
             Console.WriteLine("----------------------");
             Console.WriteLine("Enter array element");
             Console.WriteLine("----------------------");
-            for (i = 0; i < n, i++)
+            for (i = 0; i < n; i++)
             {
                 Console.Write(">" + (i + 1) + ">");
                 string s1 = Console.ReadLine();
@@ -67,7 +67,7 @@ namespace SearchAlgorithm
                 Console.WriteLine("\nNumber of comparison : " + ctr);
 
                 Console.Write("\nContinue Search (y/n): ");
-                ch = char.Parse(Console.ReadLine().ToString ToUpper);
+                ch = char.Parse(Console.ReadLine().ToString().ToUpper());
             } while ((ch == 'y'));
         }
 
@@ -80,7 +80,7 @@ namespace SearchAlgorithm
             {
                 //Accept the number to be search
                 Console.WriteLine("\nEnter the element you want to search : ");
-                int Item = Convert.ToInt32(Console.ReadLine());
+                int item = Convert.ToInt32(Console.ReadLine());
 
                 ctr = 0;
                 for (i = 0; i < n; i++)
@@ -88,12 +88,12 @@ namespace SearchAlgorithm
                     ctr++;
                     if (arr[i] == item)
                     {
-                        Console.WriteLine("\n" + Item.ToString() + " found at position " + (i + 1).ToString());
+                        Console.WriteLine("\n" + item.ToString() + " found at position " + (i + 1).ToString());
                         break;
                     }
                 }
                 if (i == n)
-                    Console.WriteLine("\n" + Item.ToString() + " not found in the array ");
+                    Console.WriteLine("\n" + item.ToString() + " not found in the array ");
                 Console.WriteLine("\n Number of comparison : " + ctr);
                 Console.Write("\nContinue search (y/n) ");
                 ch = char.Parse(Console.ReadLine().ToUpper());
@@ -106,41 +106,51 @@ namespace SearchAlgorithm
             char ch;
             do
             {
-                Console.WriteLine("Menu Option");
-                Console.WriteLine("==================");
-                Console.WriteLine("1. Linear Search");
-                Console.WriteLine("2. Binary Search");
-                Console.WriteLine("3. Exit");
-                Console.WriteLine("Enter your choice (1,2,3) : ");
-                pilihanmenu = Convert.ToInt32(Console.ReadLine());
-                switch(pilihanmenu)
+                do
                 {
-                    case 1:
-                        Console.WriteLine("");
-                        Console.WriteLine(".......................");
-                        Console.WriteLine("Linear Search");
-                        Console.WriteLine(".......................");
-                        MyList.input();
-                        MyList.LinearSearch();
-                        break;
-                    case 2:
-                        Console.WriteLine("");
-                        Console.WriteLine(".......................");
-                        Console.WriteLine("Linear Search");
-                        Console.WriteLine(".......................");
-                        MyList.input();
-                        MyList.LinearSearch();
-                        break;
-                    case 3:
-                        Console.WriteLine("exit");
-                        break;
-                    default:
-                        Console.WriteLine("Error");
-                        break;
+                    Console.WriteLine("Menu Option");
+                    Console.WriteLine("==================");
+                    Console.WriteLine("1. Linear Search");
+                    Console.WriteLine("2. Binary Search");
+                    Console.WriteLine("3. Exit");
+                    Console.WriteLine("Enter your choice (1,2,3) : ");
+                    pilihanmenu = Convert.ToInt32(Console.ReadLine());
+                    switch (pilihanmenu)
+                    {
+                        case 1:
+                            Console.WriteLine("");
+                            Console.WriteLine(".......................");
+                            Console.WriteLine("Linear Search");
+                            Console.WriteLine(".......................");
+                            MyList.input();
+                            MyList.LinearSearch();
+                            break;
+                        case 2:
+                            Console.WriteLine("");
+                            Console.WriteLine(".......................");
+                            Console.WriteLine("Linear Search");
+                            Console.WriteLine(".......................");
+                            MyList.input();
+                            MyList.LinearSearch();
+                            break;
+                        case 3:
+                            Console.WriteLine("exit");
+                            break;
+                        default:
+                            Console.WriteLine("Error");
+                            break;
+                    }
+                    Console.WriteLine("\n Pilih Menu Lagi????? (y/n) :");
+                    ch = char.Parse(Console.ReadLine().ToLower());
+                    Console.Clear();
 
-                }
-            }
-        }
+                } while (ch == 'y');
+                //to exit from the console
+                Console.WriteLine("\n\n Press Return to exit.");
+                Console.ReadLine();
+
+            } while (pilihanmenu != 3);
+        } 
     }
 }
 
