@@ -69,6 +69,13 @@ namespace SearchAlgorithm
                 Console.Write("\nContinue Search (y/n): ");
                 ch = char.Parse(Console.ReadLine().ToString ToUpper);
             } while ((ch == 'y'));
+        }
+
+        public void LinearSearch()
+        {
+            
+     
+
 
 
 
