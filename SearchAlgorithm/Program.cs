@@ -77,7 +77,22 @@ namespace SearchAlgorithm
             //search for number of comparison
             int ctr;
             do
-            { 
+            {
+                //Accept the number to be search
+                Console.WriteLine("\nEnter the element you want to search : ");
+                int Item = Convert.ToInt32(Console.ReadLine());
+
+                ctr = 0;
+                for (i = 0; i < n; i++)
+                {
+                    ctr++;
+                    if (arr[i] == item)
+                    {
+                        Console.WriteLine("\n" + Item.ToString() + " found at position " + (i + 1).ToString());
+                        break;
+                    }
+                }
+
      
 
 
