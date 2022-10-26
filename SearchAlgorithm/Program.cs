@@ -73,7 +73,11 @@ namespace SearchAlgorithm
 
         public void LinearSearch()
         {
-            
+            char ch;
+            //search for number of comparison
+            int ctr;
+            do
+            { 
      
 
 
