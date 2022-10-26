@@ -1,7 +1,7 @@
 ﻿using System;
 
 namespace SearchAlgorithm
-{ 
+{
     class Program
     {
         //Array to be searched
@@ -97,10 +97,28 @@ namespace SearchAlgorithm
                 Console.WriteLine("\n Number of comparison : " + ctr);
                 Console.Write("\nContinue search (y/n) ");
                 ch = char.Parse(Console.ReadLine().ToUpper());
-            } while ((ch = 'y'));
+            } while (ch == 'y');
         }
         static void Main(string[] args)
         {
+            Program MyList = new Program();
+            int pilihanmenu;
+            char ch;
+            do
+            {
+                Console.WriteLine("Menu Option");
+                Console.WriteLine("==================");
+                Console.WriteLine("1. Linear Search");
+                Console.WriteLine("2. Binary Search");
+                Console.WriteLine("3. Exit");
+                Console.WriteLine("Enter your choice (1,2,3) : ");
+                pilihanmenu = Convert.ToInt32(Console.ReadLine());
+            }
+        }
+    }
+}
+
+
             
 
 
